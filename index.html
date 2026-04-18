@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le K répare - Réparations Téléphones, Tablettes & PC | Lyon Croix-Rousse</title>
+    <meta name="description" content="Service de réparation de téléphones, tablettes et ordinateurs à la Croix-Rousse, Lyon. Réparation express, vente d'accessoires. Noté 5/5 sur Google.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Blue 900
+                        secondary: '#3b82f6', // Blue 500
+                        accent: '#fbbf24', // Amber 400 (for stars)
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .brand-scroller::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Bouton flottant (Mobile & Desktop) -->
+    <a href="tel:0659317274" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-50 group">
+        <i class="fa-solid fa-phone text-2xl group-hover:animate-bounce"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-gray-900 text-white text-xs font-bold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Appelez-nous
+        </span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 glass-effect border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <div class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md group-hover:bg-secondary transition-colors">
+                        K
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-primary tracking-tight">Le K répare</h1>
+                        <p class="text-xs text-gray-500 font-medium">Croix-Rousse, Lyon</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-gray-600 hover:text-primary font-medium transition-colors">Nos Services</a>
+                    <a href="#methode" class="text-gray-600 hover:text-primary font-medium transition-colors">Méthode</a>
+                    <a href="#avis" class="text-gray-600 hover:text-primary font-medium transition-colors">Avis Clients</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary font-medium transition-colors">Contact & Accès</a>
+                    <a href="tel:0659317274" class="bg-primary hover:bg-blue-800 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> 06 59 31 72 74
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2 bg-gray-50 rounded-lg">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Nos Services</a>
+                <a href="#methode" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Notre Méthode</a>
+                <a href="#avis" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Avis Clients</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Contact & Accès</a>
+                <a href="tel:0659317274" class="block mt-4 text-center bg-primary text-white px-5 py-4 rounded-xl font-bold shadow-md">
+                    <i class="fa-solid fa-phone mr-2"></i> Appeler le 06 59 31 72 74
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-gray-50">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-secondary opacity-20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-gray-100 text-gray-700 font-medium text-sm mb-6">
+                        <div class="flex text-accent">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span>5.0/5 sur Google</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Le magicien de vos <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">appareils</span>.
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Réparations expertes de téléphones, tablettes et ordinateurs à la Croix-Rousse. Service rapide, prix transparents et devis gratuit.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center flex justify-center items-center gap-2">
+                            Demander un devis
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-sm text-center">
+                            Nos services
+                        </a>
+                    </div>
+                    
+                    <!-- Réassurances -->
+                    <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-600 font-medium border-t border-gray-200 pt-8">
+                        <div class="flex flex-col items-center lg:items-start gap-1">
+                            <i class="fa-solid fa-bolt text-secondary text-xl"></i>
+                            <span>Réparation Express</span>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start gap-1">
+                            <i class="fa-solid fa-screwdriver-wrench text-secondary text-xl"></i>
+                            <span>Pièces de Qualité</span>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start gap-1 col-span-2 md:col-span-1">
+                            <i class="fa-solid fa-shield-halved text-secondary text-xl"></i>
+                            <span>Intervention Garantie</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-6 mt-16 lg:mt-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <!-- Placeholder pour la photo de la boutique -->
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 relative group">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Réparation de téléphone et ordinateur" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white flex justify-between items-end">
+                                <div>
+                                    <p class="font-bold text-2xl mb-1 drop-shadow-md">Le K répare</p>
+                                    <p class="text-sm font-medium flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> 13 bis Rue de Belfort, Lyon</p>
+                                </div>
+                                <div class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                                    Ouvert
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Banner Section -->
+    <section class="py-8 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest text-center mb-6">Nous réparons toutes les grandes marques</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fa-brands fa-apple text-4xl md:text-5xl hover:text-gray-900 transition-colors cursor-help" title="Apple"></i>
+                <i class="fa-brands fa-android text-4xl md:text-5xl hover:text-green-500 transition-colors cursor-help" title="Android"></i>
+                <i class="fa-brands fa-windows text-4xl md:text-5xl hover:text-blue-500 transition-colors cursor-help" title="Windows"></i>
+                <span class="text-xl md:text-2xl font-extrabold tracking-tighter text-gray-800">SAMSUNG</span>
+                <span class="text-xl md:text-2xl font-bold tracking-tight text-orange-500">XIAOMI</span>
+                <span class="text-xl md:text-2xl font-black italic text-blue-800 text-gray-800">hp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Steps Process Section -->
+    <section id="methode" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Une méthode simple & transparente</h2>
+                <p class="text-lg text-gray-600">Pas de mauvaises surprises, vous savez exactement où vous allez.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Connecteur visuel (Desktop only) -->
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-1 bg-gray-200 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-gray-50 rounded-full shadow-lg flex items-center justify-center text-primary text-3xl font-bold mb-6">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Diagnostic & Devis</h3>
+                    <p class="text-gray-600 text-sm">Apportez votre appareil (ou contactez-nous). Nous identifions la panne et vous proposons un devis clair et sans engagement.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-primary border-4 border-gray-50 rounded-full shadow-lg flex items-center justify-center text-white text-3xl font-bold mb-6 ring-4 ring-blue-100">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Réparation experte</h3>
+                    <p class="text-gray-600 text-sm">Validation de votre part ? Nous procédons à la réparation avec des pièces certifiées, souvent en moins d'une heure pour les smartphones.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-gray-50 rounded-full shadow-lg flex items-center justify-center text-primary text-3xl font-bold mb-6">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Test & Remise</h3>
+                    <p class="text-gray-600 text-sm">Votre appareil est rigoureusement testé avant de vous être restitué, avec une garantie sur l'intervention réalisée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Expertises</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ce que nous réparons</h2>
+                <p class="text-lg text-gray-600">Nous redonnons vie à vos appareils avec un savoir-faire minutieux.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-secondary hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Téléphones</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Écran cassé / tactile défaillant</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Remplacement de batterie</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Connecteur de charge usb</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Problème de caméra / son</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-secondary hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Ordinateurs (PC & Mac)</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Réparation d'écran portable</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Dépoussiérage et surchauffe</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Upgrade SSD / RAM (Lenteur)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Récupération de données</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-secondary hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">Tablettes & Ventes</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Réparation iPad et Android</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Vente téléphones reconditionnés</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Verres trempés (pose incluse)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-secondary text-xs"></i> Coques et chargeurs rapides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="avis" class="py-20 bg-primary relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-2xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce que disent nos clients</h2>
+                    <p class="text-lg text-blue-100">La satisfaction client est notre priorité absolue. C'est pourquoi nous sommes si fiers de notre note globale.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20 flex items-center gap-4">
+                    <div class="text-4xl font-bold text-white">5,0</div>
+                    <div>
+                        <div class="flex text-accent text-lg">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-sm text-blue-100">Basé sur 33 avis Google</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">R</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Rafael</h4>
+                            <div class="flex text-accent text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Une adresse en or, un réparateur exceptionnel ! Je suis venu pour mon PC HP, et je suis tombé sur un vrai pro..."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold">A</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Abdelrahmane D.</h4>
+                            <div class="flex text-accent text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Remplacement de la caméra cassée de mon Xiaomi. Prise en charge soignée, rapide et à prix très correct. Je recommande !"</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-700 font-bold">M</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Marie Casamayou</h4>
+                            <div class="flex text-accent text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Un magicien dans cette boutique. Il se met en 4 pour que vous ne partiez pas sans que votre portable fonctionne."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold">J</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Jeanne</h4>
+                            <div class="flex text-accent text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Incroyable, passée pour mon écran d'ordinateur, récupéré comme neuf quelques heures plus tard. Allez-y les yeux fermés !"</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://maps.google.com/?q=13+bis+Rue+de+Belfort,+69004+Lyon" target="_blank" class="inline-flex items-center gap-2 text-white font-medium hover:text-blue-200 transition-colors">
+                    Lire tous les avis sur Google <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Contact & Accès</h2>
+                <p class="text-gray-600">Passez nous voir en boutique ou envoyez-nous un message pour un devis.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Info & Map -->
+                <div class="flex flex-col space-y-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 text-primary flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Notre Boutique</h4>
+                                    <p class="text-gray-600 mt-1">13 bis Rue de Belfort<br>69004 Lyon (Croix-Rousse)</p>
+                                    <a href="https://maps.google.com/?q=13+bis+Rue+de+Belfort,+69004+Lyon" target="_blank" class="text-secondary text-sm font-bold hover:underline inline-flex items-center gap-1 mt-2">
+                                        Itinéraire <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <hr class="border-gray-100">
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Téléphone</h4>
+                                    <p class="text-gray-600 mt-1 text-xl font-medium">06 59 31 72 74</p>
+                                </div>
+                            </div>
+
+                            <hr class="border-gray-100">
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-clock text-xl"></i>
+                                </div>
+                                <div class="w-full">
+                                    <h4 class="font-bold text-gray-900 text-lg mb-2">Horaires d'ouverture</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1 w-full max-w-xs">
+                                        <li class="flex justify-between border-b border-gray-50 pb-1"><span>Lundi - Vendredi</span> <span>Ferme à 19:00</span></li>
+                                        <li class="flex justify-between border-b border-gray-50 pb-1"><span>Samedi</span> <span>Ferme à 19:00</span></li>
+                                        <li class="flex justify-between text-red-500"><span>Dimanche</span> <span>Fermé</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="flex-grow min-h-[300px] bg-gray-200 rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.689626402772!2d4.829141976698622!3d45.77742051248065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb005470d061%3A0xe54dfad6bfa8a1e5!2s13%20Rue%20de%20Belfort%2C%2069004%20Lyon!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Vercel API) -->
+                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-regular fa-envelope text-2xl text-secondary"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Demander un devis en ligne</h3>
+                    </div>
+                    
+                    <form id="contact-form" onsubmit="sendEmail(event)" class="space-y-5">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div>
+                                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-1">Prénom</label>
+                                <input type="text" id="firstName" required class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-1">Nom</label>
+                                <input type="text" id="lastName" required class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <label for="device" class="block text-sm font-semibold text-gray-700 mb-1">Appareil concerné</label>
+                            <select id="device" class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all cursor-pointer">
+                                <option value="Téléphone">Téléphone (Écran, Batterie, etc.)</option>
+                                <option value="Tablette">Tablette (iPad, Android...)</option>
+                                <option value="Ordinateur">Ordinateur (PC, Mac...)</option>
+                                <option value="Autre">Autre / Renseignement</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Symptôme / Votre message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all resize-none" placeholder="Décrivez le modèle exact et le problème rencontré..."></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 px-4 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2 mt-2">
+                            <span>Envoyer ma demande</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                        <!-- Messages de retour -->
+                        <div id="success-message" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-lg border border-green-200 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check mt-1 text-lg"></i>
+                            <div>
+                                <h4 class="font-bold">Message envoyé !</h4>
+                                <p class="text-sm mt-1">Nous avons bien reçu votre demande de devis. Nous vous répondons très vite.</p>
+                            </div>
+                        </div>
+                        <div id="error-message" class="hidden mt-4 p-4 bg-red-50 text-red-700 rounded-lg border border-red-200 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-exclamation mt-1 text-lg"></i>
+                            <div>
+                                <h4 class="font-bold">Oups, erreur d'envoi.</h4>
+                                <p class="text-sm mt-1">Une erreur est survenue. Veuillez nous appeler directement au 06 59 31 72 74.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 border-b border-gray-800 pb-10">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-white text-primary rounded-lg flex items-center justify-center font-bold text-lg">K</div>
+                        <h2 class="font-bold text-2xl text-white tracking-tight">Le K répare</h2>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4 leading-relaxed">Votre spécialiste de confiance pour la réparation experte de téléphones, tablettes et ordinateurs à Lyon Croix-Rousse.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://maps.google.com/?q=13+bis+Rue+de+Belfort,+69004+Lyon" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+                            <i class="fa-brands fa-google text-lg"></i>
+                        </a>
+                        <!-- Ajoutez vos liens si vous en avez -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="md:pl-10">
+                    <h3 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Navigation</h3>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="#services" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-gray-600"></i> Nos Services</a></li>
+                        <li><a href="#methode" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-gray-600"></i> Notre Méthode</a></li>
+                        <li><a href="#avis" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-gray-600"></i> Avis Clients</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-gray-600"></i> Demander un devis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h3 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Nous trouver</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-map-pin text-secondary mt-1"></i>
+                            <span>13 bis Rue de Belfort<br>69004 Lyon</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span class="font-bold text-white">06 59 31 72 74</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-globe text-secondary"></i>
+                            <span>lekrepar.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-gray-500 pt-8">
+                <p>&copy; 2026 Le K répare - Lyon. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar style on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md', 'bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md', 'bg-white/95');
+            }
+        });
+
+        // Form Submission Handler (Vercel API + Resend)
+        async function sendEmail(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('success-message');
+            const errorMsg = document.getElementById('error-message');
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const device = document.getElementById('device').value;
+            const message = document.getElementById('message').value;
+
+            // Visual loading state
+            const originalBtnHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Envoi en cours...';
+            btn.disabled = true;
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+
+            try {
+                // Appel vers notre fonction backend Vercel
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                        email,
+                        device,
+                        message
+                    })
+                });
+
+                if (response.ok) {
+                    btn.innerHTML = originalBtnHtml;
+                    btn.disabled = false;
+                    document.getElementById('contact-form').reset();
+                    successMsg.classList.remove('hidden');
+                    
+                    // Masquer le message de succès après 5 secondes
+                    setTimeout(() => {
+                        successMsg.classList.add('hidden');
+                    }, 8000);
+                } else {
+                    throw new Error("Erreur lors de l'envoi");
+                }
+            } catch (error) {
+                btn.innerHTML = originalBtnHtml;
+                btn.disabled = false;
+                errorMsg.classList.remove('hidden');
+                console.error("Erreur:", error);
+            }
+        }
+    </script>
+</body>
+</html>
